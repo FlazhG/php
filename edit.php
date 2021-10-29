@@ -34,14 +34,14 @@ if (isset($_POST['update'])) {
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
-          <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Update Title">
+          <label>Nombre</label>
+          <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Nombre">
         </div>
         <div class="form-group">
-        <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
+          <label>Descripción</label>
+          <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
         </div>
-        <button class="btn-success" name="update">
-          Update
-</button>
+        <button class="btn btn-success btn-block" name="update">Actualizar</button>
       </form>
       </div>
     </div>

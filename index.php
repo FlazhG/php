@@ -20,10 +20,12 @@
       <div class="card card-body">
         <form action="save_task.php" method="POST">
           <div class="form-group">
+            <label>Nombre</label>
             <input type="text" name="title" class="form-control" placeholder="Nombre" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="description" rows="2" class="form-control" placeholder="Descripción"></textarea>
+            <label for="">Descripción</label>
+            <textarea name="description" rows="2" class="form-control" placeholder="Escribe un mensaje"></textarea>
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Registrar">
         </form>
@@ -33,6 +35,7 @@
       <table class="table table-bordered">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Creado el</th>
@@ -47,6 +50,7 @@
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
+            <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td><?php echo $row['created_at']; ?></td>
